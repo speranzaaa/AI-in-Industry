@@ -8,7 +8,7 @@ from unsloth import FastLanguageModel
 
 from tqdm.auto import tqdm
 
-from .config import LLMMODEL_NAME, RULE_PATH
+from .config import LLM_MODEL_NAME, RULE_PATH
 from .utils.text import estrai_tupla, CheckRegolaOutput
 
 
@@ -59,7 +59,7 @@ def load_llm():
     global model, tokenizer
 
     model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name=LLMMODEL_NAME,
+        model_name=LLM_MODEL_NAME,
         max_seq_length=2048,
         dtype=None,
         load_in_4bit=True,

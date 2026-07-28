@@ -2,7 +2,7 @@ import pandas as pd
 
 from .config import (
     ID_COL, DATE_COL, BIRTH_COL, COL_MAP,
-    KDEMODEL_PATH, WINDOW_PATH, RULE_PATH,
+    KDE_MODEL_PATH, WINDOW_PATH, RULE_PATH,
     TEST_LLM_PATH, TEST_KDE_PATH,
 )
 from .kde import load_or_train_kde
@@ -26,7 +26,7 @@ def _init():
 
     if detector is None:
         detector, kde_numeric_cols = load_or_train_kde(
-            model_path=KDEMODEL_PATH,
+            model_path=KDE_MODEL_PATH,
             window_path=WINDOW_PATH,
         )
 
